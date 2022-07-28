@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <typeAliases>
+        <package name="com.mingming.pojo"/>
+    </typeAliases>
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <!-- 连接信息  -->
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                                                                        <!--      转移字符 &->&amp;          -->
+                <property name="url" value="jdbc:mysql:///test1?useServerPrepStmts=true&amp;useSSL=false"/>
+                <property name="username" value="root"/>
+                <property name="password" value="ssm20020321"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <!--  加载sql映射文件   -->
+<!--        <mapper resource="UserMapper.xml"/>-->
+        <!--扫描包，更方便快捷-->
+        <package name="com.mingming.mapper"/>
+    </mappers>
+</configuration>
