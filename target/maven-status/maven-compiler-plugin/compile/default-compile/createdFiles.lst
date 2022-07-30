@@ -1,9 +1,13 @@
-com\mingming\web\AddServlet.class
-com\mingming\web\SelectAllServlet.class
-com\mingming\mapper\BrandMapper.class
+com\mingming\mapper\UserMapper.class
 com\mingming\web\DeleteServlet.class
 com\mingming\web\UpdateServlet.class
 com\mingming\service\BrandService.class
+com\mingming\web\SelectByIdServlet.class
+com\mingming\web\LoginServlet.class
+com\mingming\web\AddServlet.class
+com\mingming\web\SelectAllServlet.class
+com\mingming\mapper\BrandMapper.class
+com\mingming\pojo\User.class
 com\mingming\pojo\Brand.class
 com\mingming\utils\SqlSessionFactoryUtils.class
-com\mingming\web\SelectByIdServlet.class
+com\mingming\service\UserService.class

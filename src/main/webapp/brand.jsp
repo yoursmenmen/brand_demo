@@ -12,6 +12,7 @@
         <title>Title</title>
     </head>
     <body>
+        <h1>${user.username}, 欢迎您</h1>
         <button id="add">添加</button>
         <table border="1" cellpadding="0" width="80%">
             <tr align="center">
@@ -36,7 +37,7 @@
                 <c:if test="${brand.status != 0}">
                     <td>启用</td>
                 </c:if>
-                <td><a href="http://localhost:8080/brand_demo/selectByIdServlet?id=${brand.id}">修改</a> <a id="del" href="#" onclick="del(${sequence.index}, ${brand.id})">删除</a></td>
+                <td><a href="<c:url value="/selectByIdServlet?id=${brand.id}"/>">修改</a> <a id="del" href="#" onclick="del(${sequence.index}, ${brand.id})">删除</a></td>
             </tr>
             </c:forEach>
     </body>
