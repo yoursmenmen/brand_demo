@@ -21,7 +21,7 @@ public class UserService {
      * @param password 密码
      * @return {@link User}
      */
-    public User login(String username, String password){
+    public User login(String username, String password) {
         // 2. 获取sqlSession对象
         SqlSession sqlSession = sqlSessionFactory.openSession();
         // 3. 获取mapper对象
@@ -33,4 +33,22 @@ public class UserService {
 
         return user;
     }
+
+    public boolean register(User user) {
+        // 2. 获取sqlSession对象
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        // 3. 获取mapper对象
+        UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+        // 调用方法，并关闭
+        // 判断用户名是否存在
+        User user1 = userMapper.selectByUsername(user.getUsername());
+        if (user1 == null) {
+            userMapper.add(user);
+            sqlSession.commit();
+        }
+        sqlSession.close();
+        return user1 == null;
+    }
+
+
 }
