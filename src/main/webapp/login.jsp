@@ -25,10 +25,10 @@
             <form action="http://localhost:8080/brand_demo/loginServlet" id="form">
                 <h1 id="loginMsg">LOGIN IN</h1>
                 <div id="errorMsg" align="centre">${login_err_msg}</div>
-                <p>Username:<input id="username" name="username" type="text"></p>
+                <p>Username:<input id="username" name="username" type="text" value="${cookie.username.value}"></p>
 
-                <p>Password:<input id="password" name="password" type="password"></p>
-                <p>Remember:<input id="remember" name="remember" type="checkbox"></p>
+                <p>Password:<input id="password" name="password" type="password" value="${cookie.password.value}"></p>
+                <p>Remember:<input id="remember" name="remember" value="1" type="checkbox"></p>
                 <div id="subDiv">
                     <input type="submit" class="button" value="login up">
                     <input type="reset" class="button" value="reset">&nbsp;&nbsp;&nbsp;
